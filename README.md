@@ -1,18 +1,42 @@
 ﻿# Real-Time DevOps Project
 
-A beginner-friendly end-to-end DevOps project.
+An end-to-end learning project demonstrating application development,
+containerization, database persistence, automated testing, CI/CD,
+deployment, and monitoring.
 
-## Planned Technology Stack
+## Technology Stack
 
-- Python and FastAPI
+- Python
+- FastAPI
 - PostgreSQL
-- Docker and Docker Compose
+- Docker
+- Docker Compose
 - Git and GitHub
-- GitHub Actions for CI/CD
-- Linux and cloud deployment
-- Terraform
-- Prometheus and Grafana
+- GitHub Actions (planned)
+- Terraform (planned)
+- Prometheus and Grafana (planned)
 
-## Current Stage
+## Current Features
 
-Stage 1: Project setup and prerequisite checks.
+- API homepage: GET /
+- Application and database health check: GET /health
+- Create an item: POST /items
+- List items: GET /items
+- Dockerized backend
+- PostgreSQL database
+- Persistent database volume
+- Multi-service orchestration with Docker Compose
+
+## Prerequisites
+
+- Docker Desktop
+- Git
+
+Python is required for local development outside Docker.
+
+## Run the Application
+
+From the project root, run:
+
+```powershell
+docker compose up -d --build
