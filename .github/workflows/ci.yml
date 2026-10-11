@@ -77,5 +77,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ashushrm77/realtime-devops-project:latest
-            ashushrm77/realtime-devops-project:${{ github.sha }}
+            ashush77/realtime-devops-project:latest
+            ashush77/realtime-devops-project:${{ github.sha }}
