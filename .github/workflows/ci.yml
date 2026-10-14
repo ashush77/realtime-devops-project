@@ -117,8 +117,8 @@ jobs:
               \"export IMAGE_TAG=${IMAGE_TAG}\",
               \"docker compose pull backend\",
               \"docker compose up -d --no-deps backend\",
-              \"curl --fail --silent --show-error http://127.0.0.1:8000/\"
-            ]" \
+              \"for attempt in \\$(seq 1 12); do if curl --fail --silent --show-error http://127.0.0.1:8000/; then echo Backend-health-check-passed; exit 0; fi; echo Backend-not-ready-yet-attempt-\\$attempt-of-12; sleep 5; done; echo Backend-health-check-failed-after-retries; docker compose logs --tail 100 backend; exit 1\"
+              ]"
             --query "Command.CommandId" \
             --output text)
 
