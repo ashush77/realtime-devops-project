@@ -9,7 +9,8 @@ on:
 
 permissions:
   contents: read
-
+  id-token: write
+  
 jobs:
   test:
     name: Run automated tests
