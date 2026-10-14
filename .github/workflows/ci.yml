@@ -11,7 +11,7 @@ on:
 permissions:
   contents: read
   id-token: write
-  
+
 jobs:
   test:
     name: Run automated tests
@@ -170,7 +170,7 @@ jobs:
             --output text)
 
           echo "SSM command ID: $COMMAND_ID"
-
+          #ok
           # Wait for the SSM command to finish.
           for attempt in $(seq 1 30); do
             STATUS=$(aws ssm get-command-invocation \
